@@ -1,0 +1,20 @@
+# Site settings
+author: Rose Brennan
+title: 
+header-img: img/home-bg.png
+email: brennan.m.rose@gmail.com
+copyright_name: Rose Brennan
+description: > # this means to ignore newlines until "baseurl:"
+  
+baseurl: "" # the subpath of your site, e.g. /blog
+twitter_username: 
+github_username:  brennanmrose
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]
