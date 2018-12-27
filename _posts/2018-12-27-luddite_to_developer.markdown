@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Luddite to Developer"
-date:       2018-12-27 14:58:33 +0000
+date:       2018-12-27 09:58:34 -0500
 permalink:  luddite_to_developer
 ---
 
