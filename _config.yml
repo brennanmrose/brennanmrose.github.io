@@ -1,11 +1,11 @@
 # Site settings
 author: Rose Brennan
-title: 
+title: Learning to Code
 header-img: img/home-bg.png
 email: brennan.m.rose@gmail.com
 copyright_name: Rose Brennan
 description: > # this means to ignore newlines until "baseurl:"
-  
+  My journey towards becoming a web developer
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  brennanmrose
