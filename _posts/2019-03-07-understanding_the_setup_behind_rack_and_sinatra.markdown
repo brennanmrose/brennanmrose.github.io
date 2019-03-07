@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Understanding the Setup Behind Rack and Sinatra "
-date:       2019-03-07 14:19:12 +0000
+date:       2019-03-07 09:19:13 -0500
 permalink:  understanding_the_setup_behind_rack_and_sinatra
 ---
 
