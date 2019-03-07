@@ -5,23 +5,7 @@ date:       2019-03-07 09:19:13 -0500
 permalink:  understanding_the_setup_behind_rack_and_sinatra
 ---
 
-
-Sinatra is DSL (domain specific language) for Ruby that is used to develop light-weight web applications. Sinatra utilizes Rack as its middleware. Rack is also a Ruby gem that allows us to write small bits of code and compile them to form a complex web application and when paired with Sinatra acts as a bridge between our Ruby application and our database. This requires three important parts and will be run whenever a request is received.
-
-1. It must repond to a `call` method 
-2. This `call` method utilizes one argument, typically `env` or environment, that bundles all of the components of the request
-3. The `call` method must return the http status code, headers and the body. 
-
-However, before we are able to run the `call` method we must first construct the HTTP web server to receive the requests and return the responses to the browser. This is done in the `config.ru` file using `rackup`. For example, your `config.ru` may look something like this and will be executed by running the command `rackup config.ru`:
-
-```
-#config.ru
-require_relative "./application.rb"
- 
-run Application.new
-```
-
-This will allow you to load your site and develop it on your local machine without exposing it to the wild web. When running Sinatra on Rack, you will have a `config.ru` that looks something like this:
+Sinatra is DSL (domain specific language) for Ruby that is used to develop light-weight web applications. Sinatra utilizes Rack as its middleware. Rack is also a Ruby gem that allows us to write small bits of code and compile them to form a complex web application and when paired with Sinatra acts as a bridge between our Ruby application and our database. When running Sinatra on Rack, you will need to have a `config.ru` that looks something like this:
 
 ```
 require 'sinatra'
