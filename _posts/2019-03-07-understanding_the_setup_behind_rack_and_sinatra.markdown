@@ -5,7 +5,7 @@ date:       2019-03-07 09:19:13 -0500
 permalink:  understanding_the_setup_behind_rack_and_sinatra
 ---
 
-Sinatra is DSL (domain specific language) for Ruby that is used to develop light-weight web applications. Sinatra utilizes Rack as its middleware. Rack is also a Ruby gem that allows us to write small bits of code and compile them to form a complex web application and when paired with Sinatra acts as a bridge between our Ruby application and our database. When running Sinatra on Rack, you will need to have a `config.ru` file that looks something like this:
+Sinatra is a DSL (domain specific language) for Ruby that is used to develop light-weight web applications. Sinatra utilizes Rack as its middleware. Rack is also a Ruby gem that allows us to write small bits of code and compile them to form a complex web application and when paired with Sinatra acts as a bridge between our Ruby application and our database. When running Sinatra on Rack, you will need to have a `config.ru` file that looks something like this:
 
 ```
 require 'sinatra'
