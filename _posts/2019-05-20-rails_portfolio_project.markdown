@@ -12,12 +12,10 @@ Offering your users a way to create two objects on one form can significantly im
 
      Assuming you are using form_for with Rails to create your form you will simply need to add a `fields_for` for your new                object. You can checkout documentation on `fields_for` [here](https://apidock.com/rails/ActionView/Helpers/FormHelper/fields_for).
 		 On our book storage app it would look something like this:
-		 ```
-		 <%= f.fields_for :author do |c| %>
-			  <%= c.label :name %>
-			  <%= c.text_field :name %>
-		<% end %> 
-		```
+		 ```<%= f.fields_for :author do |c| %>```
+			  ```<%= c.label :name %>```
+			  ```<%= c.text_field :name %>```
+		```<% end %> ```
 
 2. **Update Your Model**
 
