@@ -29,4 +29,6 @@ Offering your users a way to create two objects on one form can significantly im
 		 
 		 Second you will need to properly initialize your new object so that it displays in your view. You may do this by building          the secondary object on your primary object, such as `@song.build_author`. We do this instead of                                       `@song.author.build` because if the song doesn't already have an author the first part of the chained method will return `nil` and there will be nothing to build upon. As outlined in the [Rails guides](https://edgeguides.rubyonrails.org/association_basics.html):
 		 
+> 		 When initializing a new has_one or belongs_to association you must use the build_ prefix to build the association, rather than the association.build method that would be used for has_many or has_and_belongs_to_many associations.
+		 
 
