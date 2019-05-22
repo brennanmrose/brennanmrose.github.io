@@ -25,7 +25,6 @@ Offering your users a way to create two objects on one form can significantly im
 3. **Update Your Controller**
 
      The last step is to handle the new object in your controller. This is a two-part step:
-		 
 		 First you must update your strong params to accept your new object. You may do this by adding the name of your new      object and the word attributes that contains an array of attributes. For our book storage example it would look                        something like `author_attributes: [:name]`
 		 
 		 Second you will need to properly initialize your new object so that it displays in your view. You may do this by building          the secondary object on your primary object, such as `@song.build_author`. We do this instead of                                       `@song.author.build` because if the song doesn't already have an author the first part of the chained method will return `nil` and there will be nothing to build upon. As outlined in the [Rails guides](https://edgeguides.rubyonrails.org/association_basics.html):
