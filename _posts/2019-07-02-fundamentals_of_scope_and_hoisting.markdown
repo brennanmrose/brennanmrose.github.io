@@ -8,7 +8,7 @@ permalink:  fundamentals_of_scope_and_hoisting
 
 Scope and hoisting are two critical concepts in Javascript that any JS developer needs to understand. Let's get started with scope, which defines our access to variables. When you create a variable outside of a function, in the root scope or global scope, this variable will be accessible within any of your functions. When creating a variable in the global scope it is often referred to as the parent or outer scope. When a variable is declared within a function, referred to as the child or inner scope, it is only accessible from within that function. 
 
-If a variable is declared in global scope and a variable of the same name is declared within a function, the variable declared wtihin the function will be the one that is used. For example:
+If a variable is declared in global scope and a variable of the same name is declared within a function, the variable declared within the function will be the one that is used. For example:
 
 ```
 var a = 1;
@@ -51,5 +51,5 @@ var functionFoo = function() {
   console.log('this function has been run');  
 }
 ```
-will throw `Uncaught TypeError: functionFoo is not a function`, because the initialization (in this case assigning a function to the variable) has not been hoisted, but simply `var functionFoo`. 
+will throw `Uncaught TypeError: functionFoo is not a function`, because the initialization (in this case assigning a function to the variable) has not been hoisted, but simply the declaration `var functionFoo`. 
 
