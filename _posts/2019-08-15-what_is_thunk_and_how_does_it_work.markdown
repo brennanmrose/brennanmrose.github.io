@@ -1,12 +1,12 @@
 ---
 layout: post
 title:      "What is Thunk and How Does it Work?"
-date:       2019-08-15 16:31:40 +0000
+date:       2019-08-15 12:31:41 -0400
 permalink:  what_is_thunk_and_how_does_it_work
 ---
 
 
-Redux-Thunk can be a challenging concept to wrap one's head around at first. However, once you get the hang of it it's rather straight forward. As a prerequisite to understanding Redux, one must have a solid understanding of React-Redux first. What Thunk does is allow us to place asynchronous web requests using JSX fetch and promise. What is an asynchronous request you may ask? Well it is important to recognize that React utilizes asynchrounous rendering, especially when utilizing lifestyle components such as componentDidMount. This means that the DOM will be automatically refreshed without the user needing to reload the page, making the app function extremely fast. However, as we know, web requests are do not yield immediate results and depending on the server, may take some time. If we didn't incorporate Thunk into our React-Redux app, everything would break immediately because the asynchronous rendering requires content to render, and when that content comes as the response of the request, if the response is absent, it will inevitiably break. 
+Redux-Thunk can be a challenging concept to wrap one's head around at first. However, once you get the hang of it it's rather straight forward. As a prerequisite to understanding Thunk, one must have a solid understanding of React-Redux first. What Thunk does is allow us to place asynchronous web requests using JSX fetch and promise. What is an asynchronous request you may ask? Well it is important to recognize that React utilizes asynchrounous rendering, especially when utilizing lifestyle components such as componentDidMount. This means that the DOM will be automatically refreshed without the user needing to reload the page, making the app function extremely fast. However, as we know, web requests do not yield immediate results and depending on the server, may take some time. If we don't incorporate Thunk into our React-Redux app, everything will break immediately because the asynchronous rendering requires content to render, and when that content comes as the response of the request, if the response is absent, it will inevitiably fail. 
 
 This is where Thunk comes in. If we utilize fetch  to make an API request it will return a 'promise', which is simply an object that *promises* results will yield at a later time. Once the promise is resolved we will then be able to access it. One should set up these requests by chaining on a `.then` to the `fetch()` call so that our code knows what to do once the promise value updates with results from the request. Our fetch might look something like this:
 
